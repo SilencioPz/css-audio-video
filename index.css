@@ -1,0 +1,41 @@
+body {
+    background-color: #808080;
+    color: #00008B; 
+}
+
+h1, h2 {
+    text-align: center;
+}
+.video-container {
+        width: 500px; 
+        margin: 0 auto; 
+        position: relative;
+    }
+
+    .video-container iframe {
+        width: 100%;
+        height: auto;
+    }
+
+    @keyframes moveVideo {
+        0% {
+            transform: translateX(0);
+        }
+        25% {
+            transform: translateX(-500px);
+        }
+        50% {
+            transform: translateX(0);
+        }
+        75% {
+            transform: translateX(500px);
+        }
+        100% {
+            transform: translateX(0);
+        }
+    }
+    
+
+    .video-container iframe {
+        animation: moveVideo 2s infinite alternate;
+    }
